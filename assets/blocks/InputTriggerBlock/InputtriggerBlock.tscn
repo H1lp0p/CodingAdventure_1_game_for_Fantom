@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cmi4jk1hy00jp"]
+
+[ext_resource type="Script" path="res://assets/blocks/InputTriggerBlock/InputTriggerBlock.gd" id="1_3apoy"]
+[ext_resource type="PackedScene" uid="uid://cb357gkx7rhlx" path="res://assets/shared/dropable/dorpable.tscn" id="2_skvf0"]
+[ext_resource type="Texture2D" uid="uid://y7mh60emgomc" path="res://assets/test_srites/green_block.png" id="2_tnuvx"]
+[ext_resource type="PackedScene" uid="uid://tfk3bmu3gd6r" path="res://assets/shared/dragable/dragable.tscn" id="2_woupo"]
+
+[node name="InputtriggerBlock" type="Node2D"]
+script = ExtResource("1_3apoy")
+key_code = 83
+
+[node name="Dorpable" parent="." instance=ExtResource("2_skvf0")]
+position = Vector2(122, -1)
+scale = Vector2(5.48, 5.48)
+
+[node name="Dragable" parent="." instance=ExtResource("2_woupo")]
+scale = Vector2(6.065, 6.065)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_tnuvx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -49.0
+offset_top = -28.0
+offset_right = 49.0
+offset_bottom = 21.0
+text = "Input trigger
+Key: S"

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://bknibx1t6lrui"]
+
+[ext_resource type="PackedScene" uid="uid://diq533unn6fno" path="res://assets/blocks/VariableBlock/VariableBlock.tscn" id="1_xhr0b"]
+[ext_resource type="PackedScene" uid="uid://cmi4jk1hy00jp" path="res://assets/blocks/InputTriggerBlock/InputtriggerBlock.tscn" id="4_4ga8a"]
+[ext_resource type="PackedScene" uid="uid://3e0shosyhqod" path="res://assets/blocks/ActionBlock/ActionBlock.tscn" id="5_qyaxo"]
+[ext_resource type="PackedScene" uid="uid://d3omd4gc6r555" path="res://assets/blocks/dev_blocks/Info_block/InfoBlock.tscn" id="6_hii36"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="I" parent="." instance=ExtResource("1_xhr0b")]
+position = Vector2(840, 464)
+_variable_name = "val"
+_value = 10
+
+[node name="InputtriggerBlock" parent="." instance=ExtResource("4_4ga8a")]
+position = Vector2(261, 456)
+
+[node name="ActionBlock" parent="." instance=ExtResource("5_qyaxo")]
+position = Vector2(529, 419)
+
+[node name="InfoBlock" parent="." instance=ExtResource("6_hii36")]
+position = Vector2(406, 150)

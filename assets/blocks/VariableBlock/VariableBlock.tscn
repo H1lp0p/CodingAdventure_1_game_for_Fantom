@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://diq533unn6fno"]
+
+[ext_resource type="Script" path="res://assets/blocks/VariableBlock/VariableBlock.gd" id="1_t63j8"]
+[ext_resource type="Texture2D" uid="uid://cskth120t612n" path="res://assets/test_srites/black_block.png" id="2_jfchv"]
+[ext_resource type="PackedScene" uid="uid://tfk3bmu3gd6r" path="res://assets/shared/dragable/dragable.tscn" id="3_rp7ns"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j2dk1"]
+
+[node name="VariableBlock" type="Node2D"]
+script = ExtResource("1_t63j8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_jfchv")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -58.0
+offset_top = -51.0
+offset_right = -62.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "test"
+label_settings = SubResource("LabelSettings_j2dk1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dragable" parent="." instance=ExtResource("3_rp7ns")]
+scale = Vector2(5.905, 5.905)

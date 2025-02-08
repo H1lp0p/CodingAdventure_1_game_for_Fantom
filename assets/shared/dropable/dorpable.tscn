@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cb357gkx7rhlx"]
+
+[ext_resource type="Script" path="res://assets/shared/dropable/dropable.gd" id="1_ick82"]
+[ext_resource type="Texture2D" uid="uid://b4r72rg1w2d50" path="res://assets/test_srites/blue_block.png" id="2_orrp6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6q25s"]
+
+[node name="Dorpable" type="Node2D"]
+script = ExtResource("1_ick82")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_6q25s")
+
+[node name="drop_cords" type="Marker2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.341176)
+z_index = -1
+scale = Vector2(0.17, 0.17)
+texture = ExtResource("2_orrp6")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

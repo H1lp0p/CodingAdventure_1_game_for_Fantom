@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://3e0shosyhqod"]
+
+[ext_resource type="Script" path="res://assets/blocks/ActionBlock/ActionBlock.gd" id="1_5av32"]
+[ext_resource type="Texture2D" uid="uid://rytnolfmtxq5" path="res://assets/test_srites/red_block.png" id="2_4b0iw"]
+[ext_resource type="PackedScene" uid="uid://cb357gkx7rhlx" path="res://assets/shared/dropable/dorpable.tscn" id="3_4kxkn"]
+[ext_resource type="PackedScene" uid="uid://tfk3bmu3gd6r" path="res://assets/shared/dragable/dragable.tscn" id="4_qpho4"]
+
+[node name="ActionBlock" type="Node2D"]
+script = ExtResource("1_5av32")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.617455, 0.617455, 0.617455, 1)
+texture = ExtResource("2_4b0iw")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -37.0
+offset_top = -23.0
+offset_right = 43.0
+offset_bottom = 26.0
+text = "increment
++=1"
+horizontal_alignment = 1
+
+[node name="Dorpable" parent="." instance=ExtResource("3_4kxkn")]
+position = Vector2(120, 0)
+scale = Vector2(5.84, 5.84)
+
+[node name="Dragable" parent="." instance=ExtResource("4_qpho4")]
+scale = Vector2(5.785, 5.785)

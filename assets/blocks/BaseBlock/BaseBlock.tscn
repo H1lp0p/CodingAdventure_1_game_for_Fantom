@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://4ueledryxk80"]
+
+[ext_resource type="Script" path="res://assets/blocks/BaseBlock/BaseBlock.gd" id="1_n1fiv"]
+
+[node name="BaseBlock" type="Node2D"]
+script = ExtResource("1_n1fiv")

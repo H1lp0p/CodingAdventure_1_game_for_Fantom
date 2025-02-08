@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://tfk3bmu3gd6r"]
+
+[ext_resource type="Script" path="res://assets/shared/dragable/draggable.gd" id="1_3xtv8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_okekq"]
+
+[node name="Dragable" type="Node2D"]
+script = ExtResource("1_3xtv8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_okekq")
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

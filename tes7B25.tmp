@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bknibx1t6lrui"]
+
+[ext_resource type="PackedScene" uid="uid://diq533unn6fno" path="res://assets/blocks/VariableBlock/VariableBlock.tscn" id="1_xhr0b"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="VariableBlock" parent="." instance=ExtResource("1_xhr0b")]
