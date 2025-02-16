@@ -10,7 +10,6 @@ script = ExtResource("1_ris65")
 
 [node name="Player" parent="." instance=ExtResource("2_egvu8")]
 position = Vector2(576, 356)
-speed = 50
 
 [node name="InputtriggerBlock" parent="." instance=ExtResource("3_4u33f")]
 position = Vector2(157, 155)
@@ -21,7 +20,7 @@ object_to_move = NodePath("../Player")
 
 [node name="MovementBlock2" parent="." node_paths=PackedStringArray("object_to_move") instance=ExtResource("4_baw0f")]
 position = Vector2(1020, 155)
-direction = Vector2(0, -1)
+direction = Vector2(1, -1)
 object_to_move = NodePath("../Player")
 
 [node name="InputtriggerBlock2" parent="." instance=ExtResource("3_4u33f")]

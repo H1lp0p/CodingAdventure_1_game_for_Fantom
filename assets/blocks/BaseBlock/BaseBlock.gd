@@ -4,7 +4,10 @@ class_name BaseBlock
 var parrent_block : BaseBlock = null
 var child_block: BaseBlock = null
 
-func execute() -> void: pass
+signal end_execution
+
+func execute() -> void: 
+	goto_next_block()
 
 func set_child(child: BaseBlock) -> void:
 	child_block = child
@@ -14,11 +17,13 @@ func set_parrent(parrent: BaseBlock) -> void:
 
 func get_info() -> String: return "Baseblock"
 
-func on_execution_end(): pass
+func on_execution_end(): 
+	end_execution.emit()
 
 func goto_next_block():
 	if (child_block != null):
 		child_block.execute()
+		on_execution_end()
 
 func move(new_pos: Vector2):
 	if (child_block != null):
