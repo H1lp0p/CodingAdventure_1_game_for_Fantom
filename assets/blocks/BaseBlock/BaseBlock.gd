@@ -14,6 +14,12 @@ func set_parrent(parrent: BaseBlock) -> void:
 
 func get_info() -> String: return "Baseblock"
 
+func on_execution_end(): pass
+
+func goto_next_block():
+	if (child_block != null):
+		child_block.execute()
+
 func move(new_pos: Vector2):
 	if (child_block != null):
 		var now_delta = child_block.global_position - global_position

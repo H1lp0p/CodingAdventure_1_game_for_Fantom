@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bibft3n4vufnh"]
+
+[ext_resource type="Script" path="res://assets/blocks/movementBlock/movementBlock.gd" id="1_td5gi"]
+[ext_resource type="Texture2D" uid="uid://rytnolfmtxq5" path="res://assets/test_srites/red_block.png" id="2_h3jnl"]
+[ext_resource type="PackedScene" uid="uid://tfk3bmu3gd6r" path="res://assets/shared/dragable/dragable.tscn" id="3_4l2ov"]
+
+[node name="MovementBlock" type="Node2D"]
+script = ExtResource("1_td5gi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_h3jnl")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Dragable" parent="." instance=ExtResource("3_4l2ov")]
+scale = Vector2(5.54, 5.54)

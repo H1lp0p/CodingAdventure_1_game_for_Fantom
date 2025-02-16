@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://clfqucuhrt8lt"]
+
+[ext_resource type="Script" path="res://levels/level1/gamecontroller.gd" id="1_ris65"]
+[ext_resource type="PackedScene" uid="uid://f3xxrbtdtdgl" path="res://assets/Player/player.tscn" id="2_egvu8"]
+[ext_resource type="PackedScene" uid="uid://cmi4jk1hy00jp" path="res://assets/blocks/InputTriggerBlock/InputtriggerBlock.tscn" id="3_4u33f"]
+[ext_resource type="PackedScene" uid="uid://bibft3n4vufnh" path="res://assets/blocks/movementBlock/movementBlock.tscn" id="4_baw0f"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_ris65")
+
+[node name="Player" parent="." instance=ExtResource("2_egvu8")]
+position = Vector2(576, 356)
+speed = 50
+
+[node name="InputtriggerBlock" parent="." instance=ExtResource("3_4u33f")]
+position = Vector2(157, 155)
+
+[node name="MovementBlock" parent="." node_paths=PackedStringArray("object_to_move") instance=ExtResource("4_baw0f")]
+position = Vector2(463, 143)
+object_to_move = NodePath("../Player")
+
+[node name="MovementBlock2" parent="." node_paths=PackedStringArray("object_to_move") instance=ExtResource("4_baw0f")]
+position = Vector2(1020, 155)
+direction = Vector2(0, -1)
+object_to_move = NodePath("../Player")
+
+[node name="InputtriggerBlock2" parent="." instance=ExtResource("3_4u33f")]
+position = Vector2(862, 382)
+key_code = 87
